@@ -1,8 +1,10 @@
 #!/usr/bin/python3
+from traceback import print_tb
 import newspaper
 from newspaper import Article
 import re
 import pyfiglet
+from colorama import init, Style, Fore
 
 banner = pyfiglet.figlet_format("News scraper")
 print(banner)
@@ -26,7 +28,8 @@ try:
 
 except KeyboardInterrupt:
     print()
-    print("==> User KeyboardInterrupt")
+    print(Fore.RED+"==> User KeyboardInterrupt")
+    print(Style.RESET_ALL)
     exit(0)
 
 except:
@@ -34,7 +37,8 @@ except:
     a = re.match(pattern, i2)
     i2 != a
     print()
-    print("==> Error: This is not an url")
+    print(Fore.RED+"==> Error: This is not an url")
+    print(Style.RESET_ALL)
     exit(0)
 
 
@@ -52,7 +56,8 @@ try:
 
 except KeyboardInterrupt:
     print()
-    print("==> User KeyboardInterrupt")
+    print(Fore.RED+"==> User KeyboardInterrupt")
+    print(Style.RESET_ALL)
     exit(0)
 #checks for a valid url per pattern
 except:
@@ -60,14 +65,15 @@ except:
     a = re.match(pattern, i)
     i != a
     print()
-    print("==> Error: This is not an url")
+    print(Fore.RED+"==> Error: This is not an url")
+    print(Style.RESET_ALL)
     exit(0)
 
 #the article title
 a = article.title
 print()
-print("-"*91,"Title","-"*91)
-print()
+print(Fore.LIGHTCYAN_EX+"-"*91,"Title","-"*91)
+print(Style.RESET_ALL)
 print(a)
 
 
@@ -75,8 +81,8 @@ print(a)
 a1 = article.authors
 
 print()
-print("-"*90,"Authors","-"*90)
-print()
+print(Fore.LIGHTCYAN_EX+"-"*90,"Authors","-"*90)
+print(Style.RESET_ALL)
 print(*a1, sep="    ")
 print()
 
@@ -85,8 +91,8 @@ a2 = article.publish_date
 
 if a2 != None:
     print()
-    print("-"*88, "Publishdate","-"*88)
-    print()
+    print(Fore.LIGHTCYAN_EX+"-"*88, "Publishdate","-"*88)
+    print(Style.RESET_ALL)
     print(a2)
     print()
 else:
@@ -94,15 +100,16 @@ else:
 
 #prints an article summary 
 a3 = article.summary
-print("-"*86,"Article-Summary","-"*86)
-print()
+print(Fore.LIGHTCYAN_EX+"-"*86,"Article-Summary","-"*86)
+print(Style.RESET_ALL)
 print(a3)
 print()
 
 #the full article text
 a4 = article.text
-print("-"*89,"Full Text","-"*89)
-print()
+print(Fore.LIGHTCYAN_EX+"-"*89,"Full Text","-"*89)
+print(Style.RESET_ALL)
 print(a4)
 print()
-print("-"*189)
+print(Fore.LIGHTCYAN_EX+"-"*189)
+print(Style.RESET_ALL)
