@@ -1,10 +1,9 @@
 #!/usr/bin/python3
-from traceback import print_tb
 import newspaper
 from newspaper import Article
 import re
 import pyfiglet
-from colorama import init, Style, Fore
+from colorama import init, Fore
 
 #auto reset the color of colorama
 init(autoreset=True)
