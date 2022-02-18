@@ -4,6 +4,7 @@ A news-website-scraper based on the newspaper python library to read news articl
 <h1>Installation:</h1>
 You need to have python3 installed 
 <br>
+<br>
 Ubuntu:
 <br>
 <code>apt-get install python3</code>
