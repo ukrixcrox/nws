@@ -6,6 +6,9 @@ import re
 import pyfiglet
 from colorama import init, Style, Fore
 
+#auto reset the color of colorama
+init(autoreset=True)
+
 banner = pyfiglet.figlet_format("News scraper")
 print(banner)
 
@@ -29,7 +32,6 @@ try:
 except KeyboardInterrupt:
     print()
     print(Fore.RED+"==> User KeyboardInterrupt")
-    print(Style.RESET_ALL)
     exit(0)
 
 except:
@@ -38,7 +40,6 @@ except:
     i2 != a
     print()
     print(Fore.RED+"==> Error: This is not an url")
-    print(Style.RESET_ALL)
     exit(0)
 
 
@@ -57,7 +58,6 @@ try:
 except KeyboardInterrupt:
     print()
     print(Fore.RED+"==> User KeyboardInterrupt")
-    print(Style.RESET_ALL)
     exit(0)
 #checks for a valid url per pattern
 except:
@@ -66,14 +66,13 @@ except:
     i != a
     print()
     print(Fore.RED+"==> Error: This is not an url")
-    print(Style.RESET_ALL)
     exit(0)
 
 #the article title
 a = article.title
 print()
-print(Fore.LIGHTCYAN_EX+"-"*91,"Title","-"*91)
-print(Style.RESET_ALL)
+print(Fore.LIGHTCYAN_EX+"-"*91+" Title "+"-"*91)
+print()
 print(a)
 
 
@@ -81,18 +80,17 @@ print(a)
 a1 = article.authors
 
 print()
-print(Fore.LIGHTCYAN_EX+"-"*90,"Authors","-"*90)
-print(Style.RESET_ALL)
-print(*a1, sep="    ")
+print(Fore.LIGHTCYAN_EX+"-"*90+" Authors "+"-"*90)
 print()
+print(*a1, sep="    ")
 
 #prints the articles publish date except if there is none
 a2 = article.publish_date
 
 if a2 != None:
     print()
-    print(Fore.LIGHTCYAN_EX+"-"*88, "Publishdate","-"*88)
-    print(Style.RESET_ALL)
+    print(Fore.LIGHTCYAN_EX+"-"*88+" Publishdate "+"-"*88)
+    print()
     print(a2)
     print()
 else:
@@ -100,16 +98,16 @@ else:
 
 #prints an article summary 
 a3 = article.summary
-print(Fore.LIGHTCYAN_EX+"-"*86,"Article-Summary","-"*86)
-print(Style.RESET_ALL)
+print(Fore.LIGHTCYAN_EX+"-"*86+" Article-Summary "+"-"*86)
+print()
 print(a3)
 print()
 
 #the full article text
 a4 = article.text
-print(Fore.LIGHTCYAN_EX+"-"*89,"Full Text","-"*89)
-print(Style.RESET_ALL)
+print(Fore.LIGHTCYAN_EX+"-"*89+" Full Text "+"-"*89)
+print()
 print(a4)
 print()
 print(Fore.LIGHTCYAN_EX+"-"*189)
-print(Style.RESET_ALL)
+print()
