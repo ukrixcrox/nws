@@ -30,3 +30,6 @@ You can put <code>nws</code> into your <code>/bin</code> to execute it everywher
 <br>
 <h2>Contribute</h2>
 You are free to contribute and fix bugs
+<br>
+<br>
+<a href="mailto:?subject=Here%20is%20a%20cool%20app!&text="https://github.com/Falk-Witte/nws">share</a>
