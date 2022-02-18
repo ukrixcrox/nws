@@ -5,15 +5,22 @@ A news-website-scraper based on the newspaper python library to read news articl
 You need to have python3 installed 
 <br>
 Ubuntu:
+<br>
 <code>apt-get install python3</code>
 <br>
+<br>
 Fedora:
+<br>
 <code>dnf install python3</code>
 <br>
+<br>
 Arch:
+<br>
 <code>pacman -S python3</code>
 <br>
+<br>
 Then just do a quick <code>git clone </code>
+<br>
 and you're done 
 <br>
 You can put <code>nws</code> into your <code>/bin</code> to execute it everywhere.
