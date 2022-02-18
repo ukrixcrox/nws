@@ -21,7 +21,9 @@ Arch:
 <br>
 Then just do a quick <code>git clone </code>
 <br>
-and you're done 
+<br>
+And you're done! 
+<br>
 <br>
 You can put <code>nws</code> into your <code>/bin</code> to execute it everywhere.
 <br>
