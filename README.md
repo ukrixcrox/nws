@@ -20,7 +20,7 @@ Arch:
 <code>pacman -S python3</code>
 <br>
 <br>
-You also need to install the <a href="https://github.com/codelucas/newspaper">newspaper library</a>for python3
+You also need to install the <a href="https://github.com/codelucas/newspaper">newspaper library</a> for python3
 <br>
 <br>
 <code>pip3 install newspaper3k</code>
