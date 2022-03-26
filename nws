@@ -71,10 +71,11 @@ except:
     print(Fore.RED+"==> Error: This is not an url")
     exit(0)
 
+width= 100
 #the article title
 a = article.title
 print()
-print(Fore.LIGHTCYAN_EX+"-"*91+" Title "+"-"*91)
+print(Fore.LIGHTCYAN_EX+" Title ".center(width,'-'))
 print()
 print(a)
 
@@ -83,7 +84,7 @@ print(a)
 a1 = article.authors
 
 print()
-print(Fore.LIGHTCYAN_EX+"-"*90+" Authors "+"-"*90)
+print(Fore.LIGHTCYAN_EX+" Author ".center(width,'-'))
 print()
 print(*a1, sep="    ")
 
@@ -92,7 +93,7 @@ a2 = article.publish_date
 
 if a2 != None:
     print()
-    print(Fore.LIGHTCYAN_EX+"-"*88+" Publishdate "+"-"*88)
+    print(Fore.LIGHTCYAN_EX+" Publishdate ".center(width,'-'))
     print()
     print(a2)
     print()
@@ -101,16 +102,16 @@ else:
 
 #prints an article summary
 a3 = article.summary
-print(Fore.LIGHTCYAN_EX+"-"*86+" Article-Summary "+"-"*86)
+print(Fore.LIGHTCYAN_EX+" Article-Summary ".center(width,'-'))
 print()
 print(a3)
 print()
 
 #the full article text
 a4 = article.text
-print(Fore.LIGHTCYAN_EX+"-"*89+" Full Text "+"-"*89)
+print(Fore.LIGHTCYAN_EX+" Full Text ".center(width,'-'))
 print()
 print(a4)
 print()
-print(Fore.LIGHTCYAN_EX+"-"*189)
+print(Fore.LIGHTCYAN_EX+"-"*100)
 print()
