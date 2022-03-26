@@ -4,6 +4,10 @@ from newspaper import Article
 import re
 import pyfiglet
 from colorama import init, Fore
+import nltk
+
+#download punkt with nltk
+nltk.download('punkt')
 
 #auto reset the color of colorama
 init(autoreset=True)
@@ -11,7 +15,7 @@ init(autoreset=True)
 banner = pyfiglet.figlet_format("News scraper")
 print(banner)
 
-#prints examples of newswebsites 
+#prints examples of newswebsites
 print("Examples: ")
 print()
 ex = newspaper.popular_urls()
@@ -95,7 +99,7 @@ if a2 != None:
 else:
     pass
 
-#prints an article summary 
+#prints an article summary
 a3 = article.summary
 print(Fore.LIGHTCYAN_EX+"-"*86+" Article-Summary "+"-"*86)
 print()
