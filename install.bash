@@ -12,7 +12,9 @@ fi
 wget https://raw.githubusercontent.com/Falk-Witte/nws/main/nws
 
 #install newspaper3k
-if [[ -a ${newspaper3k} ]]
+newspaper=~/.local/lib/python3.10/site-packages/newspaper/
+
+if [[ -d $newspaper ]]
 then
     echo "newspaper3k is installed"
 else
@@ -20,7 +22,9 @@ else
 fi
 
 #install pyfiglet
-if [[ -a ${pyfiglet} ]]
+pyfiglet=/usr/lib/python3.10/site-packages/pyfiglet/
+
+if [[ -a $pyfiglet ]]
 then
     echo "pyfiglet is installed"
 else
@@ -28,7 +32,9 @@ else
 fi
 
 #install colorama
-if [[ -a ${colorama} ]]
+colorama=~/.local/lib/python3.10/site-packages/colorama/
+
+if [[ -a $colorama ]]
 then
     echo "colorama is installed"
 else
