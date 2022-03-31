@@ -21,7 +21,7 @@ Arch:
 
 After that just:
 
-    sudo  wget https://raw.githubusercontent.com/Falk-Witte/nws/main/install.bash && bash ./install.bash 
+    sudo wget https://raw.githubusercontent.com/Falk-Witte/nws/main/install.bash && bash ./install.bash 
 
 And you're done!
 
