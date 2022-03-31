@@ -25,4 +25,3 @@ After that just:
 
 And you're done!
 
-You can put nws into your /bin to make it globaly executable.
