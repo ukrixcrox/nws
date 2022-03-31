@@ -21,7 +21,8 @@ Arch:
 
 After that just:
 
-    wget https://raw.githubusercontent.com/Falk-Witte/nws/main/install.bash && bash ./install.bash 
+    wget https://raw.githubusercontent.com/Falk-Witte/nws/main/install.bash && bash ./install.bash
 
 And you're done!
 
+You can put nws into your /bin to make it globaly executable.

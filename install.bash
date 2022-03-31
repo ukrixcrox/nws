@@ -11,9 +11,6 @@ fi
 #install nws
 wget https://raw.githubusercontent.com/Falk-Witte/nws/main/nws
 
-#move nws into /bin
-sudo mv ./nws /bin
-
 #install newspaper3k
 newspaper=~/.local/lib/python3.10/site-packages/newspaper/
 newspaper2=/usr/lib/python3.10/site-packages/newspaper/
