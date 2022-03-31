@@ -3,8 +3,8 @@
 #nws installation script
 
 #check if root user
-if (( $EUID == 0)); then
-    echo "Pleas do not run as root"
+if (( $EUID != 0)); then
+    echo "Pleas do run as root"
     exit
 fi
 
