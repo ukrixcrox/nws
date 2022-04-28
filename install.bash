@@ -44,6 +44,8 @@ else
     pip install colorama
 fi
 
+chmod +x ~/nws
+
 #self destruct after running
 rm -f $0
 
