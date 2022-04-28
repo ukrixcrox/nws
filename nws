@@ -5,6 +5,8 @@ import re
 import pyfiglet
 from colorama import init, Fore
 import nltk
+from rich import print
+from rich.padding import Padding
 
 #download punkt with nltk
 nltk.download('punkt')
@@ -30,7 +32,9 @@ try:
     news = newspaper.build(i2, memoize_articles=False)
 
     for article in news.articles:
-        print(article.url)
+        article_url = Padding(article.url, (1, 5), expand=False)
+        print(article_url)
+
 
 except KeyboardInterrupt:
     print()
@@ -77,16 +81,19 @@ a = article.title
 print()
 print(Fore.LIGHTCYAN_EX+" Title ".center(width,'-'))
 print()
-print(a)
-
+article_title = Padding(a, (0, 4), expand=False)
+print(article_title)
+print()
 
 #prints the articles authors
-a1 = article.authors
+#a1 = article.authors
 
-print()
-print(Fore.LIGHTCYAN_EX+" Author ".center(width,'-'))
-print()
-print(*a1, sep="    ")
+#print()
+#print(Fore.LIGHTCYAN_EX+" Author ".center(width,'-'))
+#print()
+#article_authors = Padding(a1, (0, 4), expand=False)
+#print(article_authors)
+
 
 #prints the articles publish date except if there is none
 a2 = article.publish_date
@@ -95,7 +102,8 @@ if a2 != None:
     print()
     print(Fore.LIGHTCYAN_EX+" Publishdate ".center(width,'-'))
     print()
-    print(a2)
+    article_publishdate=Padding(a2, (0, 4), expand=False)
+    print(article_publishdate)
     print()
 else:
     pass
@@ -104,14 +112,16 @@ else:
 a3 = article.summary
 print(Fore.LIGHTCYAN_EX+" Article-Summary ".center(width,'-'))
 print()
-print(a3)
+article_summary=Padding(a3, (0,4), expand=False)
+print(article_summary)
 print()
 
 #the full article text
 a4 = article.text
 print(Fore.LIGHTCYAN_EX+" Full Text ".center(width,'-'))
 print()
-print(a4)
+article_text = Padding(a4, (0, 4), expand=False)
+print(article_text)
 print()
 print(Fore.LIGHTCYAN_EX+"-"*100)
 print()
