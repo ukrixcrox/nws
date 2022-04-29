@@ -44,8 +44,20 @@ else
     pip install colorama
 fi
 
-chmod +x ./nws
 
+#install rich
+rich=~/.local/lib/python3.10/site-packages/rich/
+rich2=/usr/lib/python3.10/site-packages/rich/
+
+if [[ -d $rich ]] || [[ -d $rich2 ]]
+then
+    echo "rich is instaled"
+else
+    pip install rich
+fi
+
+#make nws executable
+chmod +x ./nws
 #self destruct after running
 rm -f $0
 
