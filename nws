@@ -1,12 +1,17 @@
 #!/usr/bin/python3
+import re
 import newspaper
 from newspaper import Article
-import re
 import pyfiglet
 from colorama import init, Fore
 import nltk
 from rich import print
 from rich.padding import Padding
+from rich.console import Console
+from rich.markdown import Markdown
+
+#define object console
+console = Console()
 
 #download punkt with nltk
 nltk.download('punkt')
@@ -79,7 +84,8 @@ width= 100
 #the article title
 a = article.title
 print()
-print(Fore.LIGHTCYAN_EX+" Title ".center(width,'-'))
+article_title_markdown= Markdown("# Title")
+console.print(article_title_markdown)
 print()
 article_title = Padding(a, (0, 4), expand=False)
 print(article_title)
@@ -100,17 +106,18 @@ a2 = article.publish_date
 
 if a2 != None:
     print()
-    print(Fore.LIGHTCYAN_EX+" Publishdate ".center(width,'-'))
+    article_publishdate_markdown=Markdown("# Publishdate")
+    console.print(article_publishdate_markdown)
     print()
-    article_publishdate=Padding(a2, (0, 4), expand=False)
-    print(article_publishdate)
+    print("    ",a2)
     print()
 else:
     pass
 
 #prints an article summary
 a3 = article.summary
-print(Fore.LIGHTCYAN_EX+" Article-Summary ".center(width,'-'))
+article_summary_markdown=Markdown("# Article-Summary")
+console.print(article_summary_markdown)
 print()
 article_summary=Padding(a3, (0,4), expand=False)
 print(article_summary)
@@ -118,10 +125,10 @@ print()
 
 #the full article text
 a4 = article.text
-print(Fore.LIGHTCYAN_EX+" Full Text ".center(width,'-'))
+
+article_text_markdown=Markdown("# Text")
+console.print(article_text_markdown)
 print()
 article_text = Padding(a4, (0, 4), expand=False)
 print(article_text)
-print()
-print(Fore.LIGHTCYAN_EX+"-"*100)
 print()
