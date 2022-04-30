@@ -47,7 +47,7 @@ except KeyboardInterrupt:
     exit(0)
 
 except:
-    pattern = r'^http[ ,s]://.$'
+    pattern = r'^http[,s]://.$'
     a = re.match(pattern, i2)
     i2 != a
     print()
@@ -73,7 +73,7 @@ except KeyboardInterrupt:
     exit(0)
 #checks for a valid url per pattern
 except:
-    pattern = r'^http[ ,s]://.$'
+    pattern = r'^http[,s]://.$'
     a = re.match(pattern, i)
     i != a
     print()
