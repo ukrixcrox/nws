@@ -3,7 +3,6 @@ import re
 import newspaper
 from newspaper import Article
 import pyfiglet
-from colorama import init, Fore
 import nltk
 from rich import print
 from rich.padding import Padding
@@ -15,9 +14,6 @@ console = Console()
 
 #download punkt with nltk
 nltk.download('punkt')
-
-#auto reset the color of colorama
-init(autoreset=True)
 
 banner = pyfiglet.figlet_format("News scraper")
 print(banner)
@@ -43,7 +39,7 @@ try:
 
 except KeyboardInterrupt:
     print()
-    print(Fore.RED+"==> User KeyboardInterrupt")
+    print("[red]==> User KeyboardInterrupt[/red]")
     exit(0)
 
 except:
@@ -51,7 +47,7 @@ except:
     a = re.match(pattern, i2)
     i2 != a
     print()
-    print(Fore.RED+"==> Error: This is not an url")
+    print("[red]==> Error: This is not an url[/red]")
     exit(0)
 
 
@@ -69,7 +65,7 @@ try:
 
 except KeyboardInterrupt:
     print()
-    print(Fore.RED+"==> User KeyboardInterrupt")
+    print("[red]==> User KeyboardInterrupt[/red]")
     exit(0)
 #checks for a valid url per pattern
 except:
@@ -77,7 +73,7 @@ except:
     a = re.match(pattern, i)
     i != a
     print()
-    print(Fore.RED+"==> Error: This is not an url")
+    print("[red]==> Error: This is not an url[/red]")
     exit(0)
 
 width= 100
